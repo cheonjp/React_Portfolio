@@ -37,7 +37,6 @@
   display: flex;
   margin: 15px 0;
   -webkit-transition: .5s;
-  -o-transition: .5s;
   transition: .5s;
 }
 
@@ -77,14 +76,12 @@
 
 .slideOut {
   -webkit-transform: translateX(120%);
-      -ms-transform: translateX(120%);
           transform: translateX(120%);
   opacity: 0;
 }
 
 .slideIn {
   -webkit-transform: translateX(0);
-      -ms-transform: translateX(0);
           transform: translateX(0);
   opacity: 1;
 }
@@ -116,3 +113,4 @@
   bottom: -50px;
   left: 0;
 }
+/*# sourceMappingURL=App.css.map */
