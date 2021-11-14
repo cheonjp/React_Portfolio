@@ -15,6 +15,9 @@ h1 {
     height: 4px;
     background: #8facda;
     transform: translateY(-10px);
+    display: block;
+    margin: auto;
+    
 }
 .container {
     width: 100%;
@@ -79,4 +82,17 @@ h1 {
     p{
         padding-left:10px;
     }
+}
+.btn{
+    padding:5px 15px;;
+    border:none;
+    background-color:#517dc2;
+    color:white;
+    font-size:17px;
+    border-radius: 3px;
+}
+.btnBox{
+    display:flex;
+    justify-content:space-evenly;
+    margin: 20px 0;
 }

@@ -3,24 +3,44 @@ import Item from './Item'
 import menu from './menu'
 import Categories from './Categories'
 import './App.css';
+const categories = ['all',... new Set(menu.map((item)=> {return item.category}))]
 
 function App() {
   const [foot, setFoot]=useState(menu)
 
   const filterMenu = (category)=>{
-    
-    // const newItems = menu.filter((item)=>item.category === category)
+
     const newItems = menu.filter((item)=>{
       return item.category === category
       })
-      setFoot(newItems)
+
+      if(category === 'all'){
+        console.log('hello world')
+        setFoot(menu)
+      }else{
+
+        setFoot(newItems)
+      }
   }
+  
+  const createBtn =()=>{
+    return(
+      categories.map((btn)=>{
+        return(
+          <button class="btn" onClick ={()=>filterMenu(btn)}>{btn}</button>
+        )
+      })
+    )
+  }
+
 
   return (
     <div className="App">
       <h1>Menu</h1>
       <div className="line"></div>
-        <button onClick={()=>filterMenu('appetizer')}>breakfast</button>
+      <div className="btnBox">{
+        createBtn()
+      }</div>
       <div className="container">
         <Item footMenu ={foot}/>
       </div>
